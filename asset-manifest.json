@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/WiSchool/static/css/main.6a8da9ac.css",
+    "main.js": "/WiSchool/static/js/main.ddc4e0b3.js",
+    "static/media/image.jpg": "/WiSchool/static/media/image.66b2c2d403826e968bdd.jpg",
+    "static/media/prepared.jpg": "/WiSchool/static/media/prepared.4ddfd02a0e5c30a83659.jpg",
+    "static/media/last-CTA.jpg": "/WiSchool/static/media/last-CTA.03947ddf936f57737ef0.jpg",
+    "static/media/Frame-6535.jpg": "/WiSchool/static/media/Frame-6535.efce94473d5fd908f8f1.jpg",
+    "static/media/Frame-6541.jpg": "/WiSchool/static/media/Frame-6541.a8a0b586200e30c2ddda.jpg",
+    "static/media/Frame-6530.jpg": "/WiSchool/static/media/Frame-6530.6c093679e247d5440360.jpg",
+    "static/media/Frame-0.jpg": "/WiSchool/static/media/Frame-0.ccc7af5d9db126f2ba1a.jpg",
+    "static/media/Frame-6534.jpg": "/WiSchool/static/media/Frame-6534.9f35ca90f78077bb94a4.jpg",
+    "static/media/Component-23.jpg": "/WiSchool/static/media/Component-23.91ece3e214ae71fe30d6.jpg",
+    "static/media/Frame-6532.jpg": "/WiSchool/static/media/Frame-6532.b48ccbe05a29936653f4.jpg",
+    "static/media/Frame-6533.jpg": "/WiSchool/static/media/Frame-6533.c5927ece3e5cce0061ea.jpg",
+    "static/media/Component-25.jpg": "/WiSchool/static/media/Component-25.e615dee8634db1b0e86a.jpg",
+    "static/media/Frame-6531.jpg": "/WiSchool/static/media/Frame-6531.bfa6769a2a7a5fde12ca.jpg",
+    "static/media/image-8.jpg": "/WiSchool/static/media/image-8.481a6146692bc7640e05.jpg",
+    "static/media/Frame-6542.jpg": "/WiSchool/static/media/Frame-6542.ddbde3b061c8ac42a6ff.jpg",
+    "static/media/Frame-6540.jpg": "/WiSchool/static/media/Frame-6540.819300f5c32f83fd8dd6.jpg",
+    "static/media/Component-24.jpg": "/WiSchool/static/media/Component-24.c751c629c658c70cd3e2.jpg",
+    "static/media/Component-22.jpg": "/WiSchool/static/media/Component-22.6d21cd601fdb6594e8b8.jpg",
+    "static/media/202312011604-mobile.jpg": "/WiSchool/static/media/202312011604-mobile.d46ebd977269329973de.jpg",
+    "static/media/3-teacher.jpg": "/WiSchool/static/media/3-teacher.216587a5f65b6cb9bcaa.jpg",
+    "static/media/5-teacher.jpg": "/WiSchool/static/media/5-teacher.c58619ff04bdc43c198b.jpg",
+    "static/media/teache-one.jpg": "/WiSchool/static/media/teache-one.7dcdbdafd93503b2994a.jpg",
+    "index.html": "/WiSchool/index.html",
+    "main.6a8da9ac.css.map": "/WiSchool/static/css/main.6a8da9ac.css.map",
+    "main.ddc4e0b3.js.map": "/WiSchool/static/js/main.ddc4e0b3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6a8da9ac.css",
+    "static/js/main.ddc4e0b3.js"
+  ]
+}
