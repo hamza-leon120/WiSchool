@@ -1,0 +1,1098 @@
+@use "./layout/layout";
+@use "./mixin/mixin" as *;
+@use "./var/var" as* ;
+header {
+    margin-bottom: 47px;
+    transition: opacity 0.8s ease ;
+    &.fixed {
+        position: sticky;
+        width: 100%;
+        top: 0;
+        left: 0px;
+        z-index: 100000;
+        background-color: #DDFFFF;
+    }
+    .container {
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .bar-logo {
+            display: flex;
+            align-items: center;
+            .fa-bars {
+                display: none;
+                @include medai(mobail) {
+                    cursor: pointer;
+                    display: block;
+                    font-size: 30px;
+                    color: $second-color;
+                    margin-right: 12px;
+                }
+            }
+            .logo {
+                position: relative;
+                .circle {
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background-color:$first-color;
+                    &:first-child {
+                        top: 5px;
+                        right: 14px;
+                        @include medai(mobail) {
+                            top: 2px;
+                            right: 10px;
+                        }
+                    }
+                    &:nth-child(2) {
+                        top: 5px;
+                        right: 33px;
+                        @include medai(mobail) {
+                            top: 2px;
+                            right: 24px;
+                        }
+                    }
+                }
+                p {
+                    color: $second-color;
+                    font: {
+                        size: 32.8px;
+                        weight:  600 ;
+                    }
+                    @include medai(mobail) {
+                        font-size: 23.36px;
+                    }
+                }
+            }
+        }
+        nav {
+            width: 55%;
+            @include medai(max-medium) {
+                width: 70%;
+            }
+            @include medai(mobail) {
+                height: 0px;
+                overflow: hidden;
+                position: absolute;
+                top: 90px;
+                width: 100%;
+                left: 0px;
+                background-color: #DDFFFF;
+                transition: height 0.5s;
+                border-radius: 0 0 20px 20px;
+                &.active {
+                    height: 250px;
+                }
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                @include medai(mobail) {
+                    flex-direction: column;
+                }
+                li {
+                    color: #404040;
+                    cursor: pointer;
+                    font: {
+                        size: 16px;
+                        weight: 600;
+                    }
+                    @include medai(mobail) {
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+        .users {
+            display: flex;
+            align-items: center;
+            @include medai(max-medium) {
+                display: none;
+            }
+            .Login-button {
+                @include button (75px,36px,$third-color,$first-color);
+            }
+            .Register-button {
+                @include button (106px,44px,$first-color,$third-color);
+            }
+        }
+        .user {
+            display: none;
+            @include medai(mobail) {
+                display: block;
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                border: 2px solid$first-color;
+                position: relative;
+                cursor: pointer;
+                svg {
+                    color:$first-color;
+                    font-size: 18px;
+                    position: absolute;
+                    left: 50%;
+                    top: 6px;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+    .precentage {
+        height: 5px;
+        background-color: #09B451;
+    }
+}
+
+.hero {
+    padding-bottom:150px;
+    @include medai (mobail) {
+        padding-bottom: 75px;
+    }
+    .container {
+        .first {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            @include medai(max-large) {
+                flex-direction: column;
+            }
+            .left {
+                @include medai(max-large) {
+                    margin-bottom: 59px;
+                    align-self: start;
+                }
+                h1 {
+                    font-size: 60px;
+                    font-weight: bold;
+                    color: $second-color;
+                    margin-bottom: 68px;
+                    @include medai(mobail) {
+                        font-size: 32px;
+                    }
+                    span {
+                        color:$first-color;
+                    }
+                }
+                .Get-Started-button {
+                    @include button(161px,60px,$first-color,$third-color)
+                }
+            }
+            .right {
+                position: relative;
+                background-image: url(../img/prepared.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 506px;
+                width: 428px;
+                border-radius: 40px 40px 100px 40px;
+                position: relative;
+                @include medai(mobail) {
+                    width: 260px;
+                    height: 306px;
+                }
+                .number {
+                    position: absolute;
+                    top: 324px;
+                    right: -19px;
+                    width: 129px;
+                    height: 135px;
+                    border-radius: 6.89px 6.89px 17.22px 6.89px;
+                    background-color: $third-color;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    text-align: center;
+                    box-shadow: 0 0 42.27px 0 $fourth-color;
+                    @include medai(mobail) {
+                        width: 77px;
+                        height: 88px;
+                        right: -11px;
+                        top: 197px;
+                    }
+                    > div {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background-color: $sixth-color;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        @include medai(mobail) {
+                            width: 18px;
+                            height: 18px;
+                        }
+                        svg {
+                            color:$first-color;
+                            @include medai(mobail) {
+                                font-size: 9px;
+                            }
+                        }
+                    }
+                    p:nth-child(2) {
+                        color:$first-color;
+                        font: {
+                            size: 24px;
+                            weight: 600;
+                            
+                        }
+                        @include medai(mobail) {
+                            font-size: 14px;
+                        }
+                    }
+                    p:nth-child(3) {
+                        color: $fifth-color;
+                        font: {
+                            size: 12px;
+                            weight: 500;
+                        }
+                        @include medai(mobail)  {
+                            font-size: 7px;
+                        }
+                    }
+                }
+                .learn {
+                    position: absolute;
+                    top: 226px;
+                    left: -151px;
+                    width: 262px;
+                    height: 187px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    border-radius: 14px 14px 30px 14px;
+                    background-color: $third-color;
+                    box-shadow: 0 0 69.23px 0 $fourth-color;
+                    @include medai(mobail) {
+                        width: 142px;
+                        height: 101px;
+                        top: 146px;
+                        left: -55px;
+                    }
+                    p {
+                        color: $second-color;
+                        font: {
+                            size: 20px;
+                            weight: 600;
+                        }
+                        span {
+                            color:$first-color;
+                        }
+                        @include medai(mobail) {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .second {
+            margin-top: 117px;
+            display: flex;
+            gap: 34px;
+            justify-content: center;
+            flex-wrap: wrap;
+            > div {
+                display: flex;
+                align-items: center;
+                height: 60px;
+                padding: 0px 32px 0 16px;
+                background-color: $seventh-color;
+                width: fit-content;
+                border-radius: 5px;
+                @include medai(mobail) {
+                    padding: 0px 11px 0 14px;
+                }
+                .icon {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    @include center;
+                    background-color:$first-color;
+                    margin-right: 12px;
+                    @include medai(mobail) {
+                        width: 35px;
+                        height: 35px;
+                    } 
+                    svg {
+                        font-size: 20px;
+                        color: $third-color;
+                    }
+                }
+                p {
+                    font-size: 16px;
+                    color: $second-color;
+                    @include medai(mobail) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.favourite-course {
+    padding: 0px 0 150px 0;
+    @include medai(mobail){
+        padding: 0 0 75px 0;
+    }
+    .container {
+        .grid-favourite-course {
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden;
+            .slider {
+                .favourite {
+                    display: inline-block;
+                    width: 31.63%;
+                    height: 432px;
+                    margin-right: 2.5%;
+                    position: relative;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    @include medai(max-medium) {
+                        height: 350px;
+                    }
+                    @include medai(mobail) {
+                        height: 113px;
+                    }
+                    &.marketing {
+                        background-image: url(../img/image-8.jpg);
+                    }
+                    &.design {
+                        background-image: url(../img/Component-23.jpg);
+                    }
+                    &.programming {
+                        background-image: url(../img/Component-25.jpg);
+                        @include medai(mobail) {
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    &.technology {
+                        background-image: url(../img/Component-22.jpg);
+                    }
+                    &.photography {
+                        background-image: url(../img/Component-24.jpg);
+                    }
+                    &.cooking {
+                        background-image: url(../img/202312011604-mobile.jpg);
+                    }
+                    p {
+                        z-index: 2;
+                        position: absolute;
+                        bottom: 20px;
+                        left: 27px;
+                        color: $third-color;
+                        font: {
+                            size: 32px;
+                            weight: 600;
+                        }
+                        @include medai(max-medium){
+                            font-size: 14px;
+                            left: 10px;
+                            bottom: 10px;
+                        }
+                    }
+                    > div {
+                        z-index: 1;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        background-color: $second-color;
+                        opacity: 0.6;
+                        &.active {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.popular-courses {
+    padding-bottom: 130px;
+    @include medai(mobail) {
+        padding-bottom: 55px;
+    }
+    .container {
+        .grid-courses {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,405px);
+            gap: 32px;
+            @include medai(max-medium) {
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(3,405px);
+            }
+            @include medai(mobail) {
+                grid-template-rows: repeat(3,209px);
+                gap: 15px;
+            }
+        }
+    }
+}
+
+.new-skill {
+    padding-bottom: 120px ;
+    @include medai(mobail) {
+        padding-bottom: 50px;
+    }
+    .container {
+        .grid-skill {
+            position: relative;
+            overflow: hidden; 
+            white-space: nowrap;
+            @include medai(mobail) {
+                .arrows {
+                    top: 43%;
+                }
+            }
+            .slider {
+                .courses {
+                    white-space: wrap;
+                    display: inline-block;
+                    width: 32.01%;;
+                    height: 405px;
+                    margin-right: 2%;
+                    box-shadow: none ;
+                    @include medai(max-medium) {
+                        height: 380px;
+                        .parent {
+                            div {
+                                &:nth-child(2){
+                                    p {
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+                            .title {
+                                margin: 0;
+                            }
+                            .price {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    @include medai(mobail){
+                        height: 209px;
+                        .parent {
+                            .fa-star {
+                                margin-right: 3px;
+                            }
+                            .title {
+                                font-size: 8px;
+                                margin: 0;
+                            }
+                            > div {
+                                &:nth-child(2){
+                                    p {
+                                        font-size: 8px;
+                                    }
+                                    svg {
+                                        font-size: 10px;
+                                        margin-right: 3px;
+                                    }
+                                }
+                            }
+                            .price {
+                                font-size: 14px !important;
+                                bottom: 28px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.life {
+    padding-bottom: 108px;
+    @include medai(mobail){
+        padding-bottom: 62px;
+    }
+    .container {
+        .print {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 96px;
+            @include medai (max-medium){
+                grid-template-columns: 0.9fr;
+            }
+            .left {
+                position: relative;
+                border-radius: 28.93px 28.93px 73.32px 28.93px;
+                height: 461px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 28.93px 28.93px 73.32px 28.93px;
+                }
+                @include medai(mobail) {
+                    height: 403px;
+                }
+                > div {
+                    box-shadow: 0 0 76px 0 $fourth-color;
+                    position: absolute;
+                    top:211px;
+                    right: -48px;
+                    padding: 12px 0 28px 0;
+                    width: 129px;
+                    height: 146px;
+                    background-color: $third-color;
+                    border-radius: 6.89px 6.89px 17.22px 6.89px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    @include medai(mobail) {
+                        width: 113px;
+                        height: 127px;
+                        top: 185px;
+                        right: -41px;
+                        background-size: contain;
+                    }
+                    .icon {
+                        margin-bottom: 19px;
+                        width: 41px;
+                        height: 41px;
+                        border-radius: 50%;
+                        background-color: $sixth-color;
+                        @include center;
+                        @include medai(mobail) {
+                            width: 35px;
+                            height: 35px;
+                            margin-bottom: 17px;
+                        }
+                        svg {
+                            font-size: 21px;
+                            color:$first-color;
+                            @include medai(mobail) {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    p {
+                        color: $fifth-color;
+                        font: {
+                            size: 16px;
+                            weight: 600;
+                        }
+                        span {
+                            color:$first-color;
+                        }
+                        @include medai(mobail) {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+            .right {
+                p {
+                    &:first-child {
+                        color: $fifth-color;
+                        line-height: auto;
+                        margin-bottom: 24px;
+                        font: {
+                            size: 48px;
+                            weight: 600;
+                        }
+                        @include medai(mobail) {
+                            font-size: 24px;
+                        }
+                    }
+                }
+                > div {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 32px;
+                    p {
+                        font-size: 20px;
+                        font-weight: 500;
+                        color:$fifth-color ;
+                        @include medai(mobail) {
+                            font-size: 14px;
+                        }
+                    }
+                    .icon {
+                        margin-right: 24px ;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        background-color: $seventh-color;
+                        @include center;
+                        @include medai(mobail) {
+                            width: 30px;
+                            height: 30px;
+                        }
+                        svg {
+                            font-size: 24px;
+                            color:$first-color;
+                            @include medai(mobail) {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.reviews {
+    padding-bottom: 159px;
+    .container {
+        .section-title {
+            text-align: center;
+        }
+        .pirnt {
+            display: grid;
+            grid-template-columns: 382px 1fr;
+            gap: 57px;
+            align-items: center;
+            @include medai(max-medium) {
+                grid-template-columns: 1fr;
+            }
+            .left {
+                @include medai(max-medium)  {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                p {
+                    font: {
+                        size: 48px;
+                        weight: bold;
+                    }
+                    color: $second-color;
+                    @include medai(max-medium) {
+                        font-size: 35px;
+                    }
+                    @include medai(mobail) {
+                        font-size: 24px;
+                    } 
+                    span {
+                        color:$first-color;
+                    }
+                }
+                .arrowss {
+                    margin-top: 71px;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 168px;
+                    @include medai(max-medium) {
+                        width: 150px  ;
+                        margin: 0px;
+                    }
+                    
+                    @include medai(mobail) {
+                        width: 115px;
+                    }
+                    div {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        @include center;
+                        border: 1px solid$first-color;
+                        cursor: pointer;
+                        @include medai(mobail) {
+                            width: 35px;
+                            height: 35px;
+                        }
+                        svg {
+                            font-size: 30px;
+                            color:$first-color;
+                            @include medai(mobail) {
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                }
+            }
+            .right {
+                display: grid;
+                grid-template-columns: repeat(5,480px);
+                gap: 32px;
+                overflow: hidden;
+                @include medai(mobail) {
+                    grid-template-columns: repeat(5,183px);
+                    grid-template-rows: 220px;
+                    gap: 16px;
+                }
+                .teacher {
+                    padding: 59px 56px 53px 45px;
+                    background-color: $third-color;
+                    box-shadow: 0 0 20px 0 #E2E2E2  ;
+                    border-radius: 10px;
+                    transition: transform 0.5s;
+                    @include medai(mobail) {
+                        padding: 17px;
+                    }
+                    > div {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            width: 70px;
+                            height: 70px;
+                            border-radius: 50%;
+                            margin-right: 16px;
+                            @include medai(mobail) {
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+                        .teacher-name {
+                            color: $second-color;
+                            font : {
+                                size: 20px;
+                                weight: bold;
+                            }
+                        }
+                        .job {
+                            color:$first-color;
+                            font: {
+                                size: 18px;
+                                weight: 600;
+                            }
+                        }
+                    }
+                    .contant {
+                        margin-top: 33px;
+                        color: $fifth-color;
+                        font-size: 18px;
+                        @include medai(mobail) {
+                            margin-top: 18px;
+                        }
+                    }
+                }
+                p {
+                    @include medai(mobail){
+                        font-size: 12px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.instructors-section {
+    padding-bottom: 120px;
+    @include medai(mobail) {
+        padding-bottom: 75px ;
+    }
+    .container {
+        .print {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            gap: 32px;
+            @include medai (max-medium) {
+                grid-template-columns: repeat(2,1fr);
+            }
+            @include medai(mobail) {
+                grid-template-columns: repeat(1,1fr);
+            }
+            .instructors {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                box-shadow: 0 0 20px 0 #CBCBCB;
+                padding: 31px 61px 42px 61px ;
+                border-radius: 20px;
+                @include medai(mobail) {
+                    padding: 20px 26px 14px 26px;
+                }
+                img {
+                    width: 113px;
+                    height: 116px;
+                    border-radius: 50%;
+                    margin-bottom: 21px;
+                    @include medai(mobail){
+                        width: 52px;
+                        height: 52px;
+                        margin-bottom: 10px;
+                    }
+                }
+                .name {
+                    color: $fifth-color;
+                    margin-bottom: 10px;
+                    font : {
+                        size: 20px ;
+                        weight: 600;
+                    }
+                    @include medai(mobail){
+                        font-size: 16px;
+                        margin-bottom: 7px;
+                    }
+                }
+                .job {
+                    color:$first-color;
+                    margin-bottom: 48px;
+                    font: {
+                        size: 16px;
+                        weight: 500;
+                    }
+                    @include medai (mobail) {
+                        font-size: 7.46px;
+                        margin-bottom: 24px;
+                    }
+                }
+                .contant {
+                    font-size: 16px;
+                    color: $fifth-color;
+                    @include medai(mobail){
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact-us {
+    background-image: url(../img/last-CTA.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    .back {
+        z-index: -1;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: $second-color;
+        opacity: 0.81;
+    }
+    .container {
+        .print {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include medai(max-large) {
+                text-align: center;
+                padding: 78px 0 70px 0;
+            }
+            img {
+                margin-right: 105px;
+                height: 517px;
+                border-radius: 20px;
+                position: relative;
+                top: -58px;
+                @include medai(max-medium) {
+                    display: none;
+                }
+            }
+            .right {
+                > p {
+                    color: $third-color;
+                    &:first-child {
+                        font: {
+                            size: 42px;
+                            weight: bold ;
+                        }
+                        margin-bottom: 42px;
+                        @include medai (mobail) {
+                            font-size: 24px;
+                            margin-bottom: 38px;
+                        }
+                    }
+                    &:nth-child(2){
+                        font-size: 24px;
+                        margin-bottom: 99px;
+                        @include medai (mobail) {
+                            font-size: 16px;
+                            margin-bottom: 70px;
+                        }
+                    }
+                }
+                .buttons {
+                    width: 356px;
+                    display: flex;
+                    justify-content: space-between;
+                    @include medai (max-medium) {
+                        margin: auto;
+                    }
+                    @include medai (mobail) {
+                        gap: 20px;
+                        width: 95%;
+                    }
+                    .button {
+                        &:nth-child(1){
+                            @include button(161px,60px,$first-color,$third-color);
+                        }
+                        &:nth-child(2){
+                            @include button(161px,60px,$third-color,$first-color)
+                        }
+                    }
+                }
+    
+            }
+        }
+    }
+}
+footer {
+    background-color: $second-color;
+    padding: 130px 0 49px 0;
+    height: 587px;
+    @include medai(max-medium) {
+        height: 900px;
+    }
+    @include medai(mobail) {
+        height: 790px;
+        padding: 67px 0 60px 0;
+    }
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .top {
+            
+            display: grid;
+            gap: 108px;
+            grid-template-columns: 1fr auto;
+            @include medai(max-medium) {
+                grid-template-columns: auto ;
+            }
+            .left {
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                @include medai(max-medium) {
+                    width: 300px;
+                }
+                p {
+                    color: $third-color;
+                }
+                .name {
+                    font: {
+                        size: 32.8px;
+                        weight: 600 ;
+                    }
+                }
+                .contant {
+                    font-size: 16px;
+                }
+                .icons {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 158px;
+                    svg {
+                        font-size: 24px;
+                        color: #0AC75A;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .right {
+                display: grid;
+                grid-template-columns: repeat(5,auto);
+                gap: 70px;
+                @include medai(mobail) {
+                    gap: 25px;
+                }
+                ul {
+                    list-style: none;
+                    @include medai(mobail) {
+                        &:nth-child(4),
+                        &:nth-child(5) {
+                            display: none;
+                        }
+                    }
+                    li {
+                        margin-bottom: 8px;
+                        a {
+                            font-size: 12px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+        .bottom {
+            margin: auto;
+            width: fit-content;
+            @include medai(mobail) {
+                margin: 0;
+                width: 100%;
+            }
+            > p {
+                font : {
+                    size: 24px;
+                    weight: 600;
+                }
+                color: $third-color;
+                margin-bottom: 25px;
+                text-align: center;
+                @include medai(mobail) {
+                    text-align: start;
+                    font-size: 20px;
+                }
+            }
+            > div {
+                form {
+                    width: 545px;
+                    height: 52px;
+                    display: flex;
+                    @include medai(mobail) {
+                        width: 100%;
+                    }
+                    input {
+                        padding-left: 18px;
+                        width: 75%;
+                        height: 100%;
+                        color: #3BD27B;
+                        font : {
+                            size: 14px;
+                            weight: 600 ;
+                        }
+                    }
+                    .button {
+                        border: none;
+                        width: 25%;
+                        height: 100%;
+                        background-color: #0AC75A;
+                        color: $third-color;
+                        border-radius: 0 5px 5px 0;
+                        cursor: pointer;
+                        @include medai(mobail) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.up {
+    cursor: pointer;
+    display: none;
+    bottom: 30px ;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-color:$first-color;
+    color: $third-color;
+    border-radius: 12px;
+    @include center;
+    svg {
+        font-size: 17px;
+    }
+}
