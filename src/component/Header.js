@@ -46,7 +46,7 @@ function Header(){
                 if (window.scrollY >= 500){
                     setFixed("fixed")
                     setOpacity(1)
-                    setWidth((((window.scrollY + windowHeight + 250) * 100) /  bodyHeight).toFixed(0))
+                    setWidth((((window.scrollY + windowHeight) * 100) /  bodyHeight + 1).toFixed(0))
                 }
             }else {
                 setFixed('')
