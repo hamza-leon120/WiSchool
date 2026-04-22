@@ -76,13 +76,13 @@ header {
                 height: 0px;
                 overflow: hidden;
                 position: absolute;
-                top: 80px;
+                top: 79px;
                 width: 100%;
                 left: 0px;
                 background-color: #DDFFFF;
                 transition: height 0.5s;
                 border-radius: 0 0 20px 20px;
-                z-index: 10000000000000000000000000000;
+                z-index: 10000;
                 &.active {
                     height: 270px;
                 }
