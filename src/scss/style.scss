@@ -82,6 +82,7 @@ header {
                 background-color: #DDFFFF;
                 transition: height 0.5s;
                 border-radius: 0 0 20px 20px;
+                z-index: 10000000000000000000000000000;
                 &.active {
                     height: 250px;
                 }
