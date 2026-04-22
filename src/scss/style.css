@@ -286,7 +286,7 @@ header .container nav {
     height: 0px;
     overflow: hidden;
     position: absolute;
-    top: 90px;
+    top: 80px;
     width: 100%;
     left: 0px;
     background-color: #DDFFFF;
@@ -295,7 +295,7 @@ header .container nav {
     z-index: 10000000000000000000000000000;
   }
   header .container nav.active {
-    height: 250px;
+    height: 270px;
   }
 }
 header .container nav ul {
