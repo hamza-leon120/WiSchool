@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/WiSchool/static/css/main.413a8077.css",
+    "main.css": "/WiSchool/static/css/main.5ba6f0cf.css",
     "main.js": "/WiSchool/static/js/main.e3b6f57b.js",
     "static/media/image.jpg": "/WiSchool/static/media/image.66b2c2d403826e968bdd.jpg",
     "static/media/prepared.jpg": "/WiSchool/static/media/prepared.4ddfd02a0e5c30a83659.jpg",
@@ -25,11 +25,11 @@
     "static/media/5-teacher.jpg": "/WiSchool/static/media/5-teacher.c58619ff04bdc43c198b.jpg",
     "static/media/teache-one.jpg": "/WiSchool/static/media/teache-one.7dcdbdafd93503b2994a.jpg",
     "index.html": "/WiSchool/index.html",
-    "main.413a8077.css.map": "/WiSchool/static/css/main.413a8077.css.map",
+    "main.5ba6f0cf.css.map": "/WiSchool/static/css/main.5ba6f0cf.css.map",
     "main.e3b6f57b.js.map": "/WiSchool/static/js/main.e3b6f57b.js.map"
   },
   "entrypoints": [
-    "static/css/main.413a8077.css",
+    "static/css/main.5ba6f0cf.css",
     "static/js/main.e3b6f57b.js"
   ]
 }
